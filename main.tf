@@ -6,10 +6,15 @@ terraform {
       source  = "hashicorp/aws"
       version = ">= 3.42.0"
     }
-  }
-}
 
-provider "aws" {
-  profile = "harish.km@systems-plus.com"
-  region  = "us-east-1"
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.2.0"
+    }
+
+    helm = {
+      source  = "hashicorp/helm"
+      version = ">= 2.1.2"
+    }
+  }
 }
